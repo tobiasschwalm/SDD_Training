@@ -1,4 +1,4 @@
-# S6862 – Lernumgebung
+# SDD – Lernumgebung
 
 Lernumgebung für den Kurs **Spec-Driven Development mit OpenSpec**. Sie bringt alle Werkzeuge mit. Die Projekte der Übungen legt ihr selbst an.
 
