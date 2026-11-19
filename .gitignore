@@ -1,0 +1,6 @@
+projekte/
+__pycache__/
+.pytest_cache/
+report.xml
+validate.json
+.DS_Store

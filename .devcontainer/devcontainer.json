@@ -1,0 +1,25 @@
+{
+  "name": "S6862 – Spec-Driven Development mit OpenSpec",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=claude-code-config-${devcontainerId},target=/home/vscode/.claude,type=volume"
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "anthropic.claude-code",
+        "redhat.vscode-yaml",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "mkdir -p projekte && echo \"OpenSpec $(openspec --version), Node.js $(node --version), Claude Code $(claude --version), $(java -version 2>&1 | head -1), OpenFastTrace $(basename $OFT_JAR)\" && echo 'Lernumgebung bereit. Aufgaben in aufgaben/, Vorlagen in vorlagen/, eigene Projektordner unter projekte/.'"
+}

@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "OpenSpec: Validieren",
+      "detail": "Alle Specs und Changes des Projekts der geöffneten Datei streng prüfen (openspec validate --all --strict)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; while [ \"$d\" != / ] && [ ! -d \"$d/openspec\" ]; do d=$(dirname \"$d\"); done; cd \"$d\" && openspec validate --all --strict",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Tests ausführen",
+      "detail": "Tests des Projekts der geöffneten Datei ausführen (node --test oder pytest)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; while [ \"$d\" != / ] && [ ! -d \"$d/openspec\" ]; do d=$(dirname \"$d\"); done; cd \"$d\" && if ls test/*.test.js >/dev/null 2>&1; then node --test; else python3 -m pytest -q; fi",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "OpenSpec: Status",
+      "detail": "Offene Changes und Specs des Projekts der geöffneten Datei anzeigen (openspec list)",
+      "type": "shell",
+      "command": "d='${fileDirname}'; while [ \"$d\" != / ] && [ ! -d \"$d/openspec\" ]; do d=$(dirname \"$d\"); done; cd \"$d\" && openspec list && openspec list --specs",
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "panel": "shared"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+schema: spec-driven
+
+context: |
+  hello: Browser-Anwendung, die eine Begrüßung zeigt.
+  Plain JavaScript im Browser, ohne Bibliotheken und ohne Build-Schritt.
+  Tests mit dem eingebauten Testmodul node:test, ohne Pakete.
+  Specs auf Deutsch.
+
+rules:
+  tasks:
+    - Je Szenario zuerst ein Unit-Test, vor dem Code. Er übernimmt das erwartete Ergebnis wörtlich aus dem THEN.
+    - Der Testname enthält den Szenario-Namen.

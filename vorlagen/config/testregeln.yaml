@@ -1,0 +1,20 @@
+rules:
+  design:
+    - Vorher adr/ lesen. Abweichung nur mit neuem ADR.
+  tasks:
+    - Je Szenario zuerst ein Task für einen Unit-Test in test/, der das Szenario prüft. Der Testname ist der Szenario-Name.
+    - Fehlt die Funktion in src/tasks.js, vorher eine leere Funktion anlegen. Der Test ist dann rot, weil das Verhalten fehlt, nicht weil der Export fehlt.
+    - Ein Code-Task setzt nur so viel um, wie der Test davor verlangt.
+    - Jeder Code-Task prüft, dass alle Tests grün sind und die Testdateien seit dem Test-Task unverändert blieben.
+    - Zuletzt ein Task zum Aufräumen ohne neues Verhalten, alle Tests bleiben grün.
+
+operations:
+  apply:
+    guidance:
+      - Einen Test nach dem anderen. Vor jedem Code-Schritt den roten Lauf von node --test zeigen.
+      - Ist ein Test rot, den Code ändern und nie den Test.
+      - Kein Test wird übersprungen, auskommentiert oder gelöscht. Bestehende Tests bleiben unverändert.
+      - Code, der vor seinem roten Test entstand, löschen und mit dem Test neu beginnen.
+      - Widerspricht ein Test der Spec, anhalten und fragen.
+      - Ist ein neuer Test sofort grün, anhalten und melden.
+      - Nach drei Versuchen ohne Grün anhalten und den Fehler melden.

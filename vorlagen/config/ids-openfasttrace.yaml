@@ -1,0 +1,20 @@
+schema: spec-driven
+
+context: |
+  Auszug aus der ToDo-App: Logik in src/tasks.js, Tests mit node:test in test/.
+  Specs auf Deutsch.
+  Anforderungen kommen aus dem ALM (alm/systemanforderungen.md). Eine ID nie erfinden.
+  Rückverfolgbarkeit prüft OpenFastTrace: java -jar <pfad>/openfasttrace-4.11.0.jar trace alm openspec/specs src test
+
+rules:
+  specs:
+    - "Erste Zeile im Rumpf eines Requirements ist seine ID mit Revision in Backticks, z. B. `req~srs-1~1`."
+    - "Darunter der Satz mit SHALL, dann Covers: mit der Systemanforderung als Listenpunkt und Needs: impl, utest."
+    - Ändert sich der Text eines Requirements, steigt die Revision in der ID.
+
+operations:
+  apply:
+    guidance:
+      - "Setze über jede Funktion in src/ den Kommentar // [impl->req~<id>~<rev>] mit der ID aus der Spec."
+      - "Setze über jeden Test zu einem Szenario den Kommentar // [utest->req~<id>~<rev>]."
+      - Schreibe keinen Code ohne Requirement mit ID. Fehlt eines, melde die Lücke.
