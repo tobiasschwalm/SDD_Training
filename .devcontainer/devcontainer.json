@@ -17,9 +17,11 @@
       "extensions": [
         "anthropic.claude-code",
         "redhat.vscode-yaml",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-vscode.live-server",
+        "mathematic.vscode-pdf"
       ]
     }
   },
-  "postCreateCommand": "mkdir -p projekte && echo \"OpenSpec $(openspec --version), Node.js $(node --version), Claude Code $(claude --version), $(java -version 2>&1 | head -1), OpenFastTrace $(basename $OFT_JAR)\" && echo 'Lernumgebung bereit. Aufgaben in aufgaben/, Vorlagen in vorlagen/, eigene Projektordner unter projekte/.'"
+  "postCreateCommand": "echo \"OpenSpec $(openspec --version), Node.js $(node --version), Claude Code $(claude --version), $(java -version 2>&1 | head -1), OpenFastTrace $(basename $OFT_JAR)\" && echo 'Learning environment ready. The to-do app grows in this root folder, exercises in exercises/, templates in exercises/templates/.'"
 }
