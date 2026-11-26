@@ -5,7 +5,7 @@ Files to copy into the to-do app in the root folder of the learning environment.
 | File | Purpose | Used in |
 |---|---|---|
 | `config/01-todo-app.yaml` | replaces the content of `openspec/config.yaml`: project, tech stack (HTML5, JavaScript, LocalStorage, node:test), conventions and non-goals as context, no rules | Set up OpenSpec, all later exercises |
-| `config/06-todo-app-layers.yaml` | the same plus the architect's decision as the convention “Layers” (UI components, application logic, persistence, `src/main.js`), replaces the content of `openspec/config.yaml` | Layers without behavior change |
+| `config/06-todo-app-layers.yaml` | the same plus the architect's decision as the section “Architecture” (UI components, application logic, persistence, `src/main.js`), replaces the content of `openspec/config.yaml` | Layers without behavior change |
 
 To copy a config.yaml template, for example:
 
