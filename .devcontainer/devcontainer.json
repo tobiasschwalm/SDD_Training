@@ -1,5 +1,5 @@
 {
-  "name": "S6862 – Spec-Driven Development mit OpenSpec",
+  "name": "SDD",
   "build": {
     "dockerfile": "Dockerfile"
   },

@@ -1,0 +1,23 @@
+schema: spec-driven
+
+context: |
+  Project: to-do app
+  Description: application for managing tasks in a to-do list
+
+  Tech stack:
+    - HTML5
+    - JavaScript
+    - LocalStorage for persistence
+    - node:test for unit tests
+
+  Conventions:
+    - All source code in src/
+    - Modern UI
+    - One plain CSS file per UI component, no build step
+    - Plain JavaScript and CSS, no libraries
+    - Less code is better code
+    - Layers: UI components in src/ui/, application logic in src/logic/ without DOM and storage, persistence in src/persistence/, src/main.js connects them
+
+  Non-goals:
+    - Authentication and user accounts
+    - Mobile-first (responsive, but desktop-first)
