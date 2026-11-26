@@ -8,7 +8,7 @@ context: |
     - HTML5
     - JavaScript
     - LocalStorage for persistence
-    - node:test for unit tests
+    - node:test for unit tests in test/
 
   Conventions:
     - All source code in src/
@@ -21,7 +21,7 @@ context: |
     - UI layer (src/ui/): shows the tasks, may use the logic layer
     - Logic layer (src/logic/): rules for tasks, no DOM, no storage, uses no other layer
     - Persistence layer (src/persistence/): saves the tasks in LocalStorage, uses no other layer
-    - src/main.js: starts the app and connects UI and persistence
+    - src/main.js: starts the app, loads the tasks via persistence, completes them via the logic and connects UI and persistence
 
   Non-goals:
     - Authentication and user accounts

@@ -19,6 +19,6 @@ cp exercises/templates/config/01-todo-app.yaml openspec/config.yaml
 
 ## License
 
-Our own texts are under MIT, see `LICENSE` in the root folder of the learning environment. Third-party parts state their origin and license in their own folder.
+Our own texts are under MIT. Third-party parts state their origin and license in their own folder.
 
 OpenSpec, Claude Code and OpenFastTrace are names or trademarks of their owners. This material is independent of their makers.

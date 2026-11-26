@@ -8,7 +8,7 @@ context: |
     - HTML5
     - JavaScript
     - LocalStorage for persistence
-    - node:test for unit tests
+    - node:test for unit tests in test/
 
   Conventions:
     - All source code in src/
